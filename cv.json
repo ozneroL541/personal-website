@@ -36,10 +36,16 @@
       "location": "Trento, Italy",
       "url": "https://eagletrt.it",
       "startDate": "2025-11-19",
-      "summary": "Telemetry platform software development to send racing car's data to external devices for analysis. Conﬁguration of the Raspberry Pi on which the telemetry application runs in order to receive and send data to the ECU through multiple CAN bus creating a proper overlay on the SPI.",
-      "highlights": [],
-      "responsibilities": [],
-      "achievements": [],
+      "summary": "Proud official member of the E-Agle Trento Racing Team, an only student university team, which designs, builds and races a single-seater electric car in the Formula SAE competitions.",
+      "highlights": [
+        "I worked a year as Telemetry Technician in the E-Agle Trento Racing Team, developing the in-house self-made telemetry system which allows the team to monitor the car's signals in real-time during the tests and races."
+      ],
+      "achievements": [
+        "I researched and documented a function optimization which allows the telemetry system to significantly improve the deserialization of the messages received from the car.",
+        "I made a fully working SPI to CAN overlay on a Raspberry Pi 5 to allow the telemtry system to communicate directly to with the CAN bus of the car.",
+        "I researched which database to use for our Telemetry system reading documentation and running simulations to find the best solution for our needs.",
+        "I designed and implement the system which allows the telemetry system to communicate with the database of sensor's signals."
+      ],
       "skills": [
         "Python",
         "C++",
@@ -56,7 +62,6 @@
       "startDate": "2025-06-03",
       "endDate": "2025-09-10",
       "summary": "Managing a Cybersecurity Platform and Risk Management Activities. SGBox SIEM configuration and managment with integration of data sources and data correlation to analyze cyberattacks on a high-availability network infrastructure based on a VMware virtualization environment.Acquisition of expertise in data collection and event correlation on an innovative Security Information and Event Management system.Vulnerability Scans on a variety of hosts with Qualys and Greenbone.",
-      "highlights": [],
       "skills": [
         "SIEM",
         "SGBox",
@@ -64,6 +69,33 @@
         "Vulnerability Scans",
         "Qualys",
         "Greenbone"
+      ]
+    },
+    {
+      "name": "Università degli Studi dell'Insubria",
+      "position": "Tutor",
+      "location_type": "On site",
+      "location": "Varese, Italy",
+      "startDate": "2025-02",
+      "endDate": "2025-07",
+      "summary": "Tutoring activity for the CyberChallenge.IT 2025 course at the University of Insubria. I'm the winner of the CyberChallenge.IT 2024 local competition and  I took part in the national competition in Turin with 5 other students, representing the University of Insubria. After this successful experience, I was chosen as a mentor for the following edition of the academic course.",
+      "skills": [
+        "Cybersecurity",
+        "Network Security",
+        "Mentoring"
+      ]
+    },
+    {
+      "name": "Europcar Como",
+      "position": "Car wash attendant",
+      "location_type": "On site",
+      "location": "Como, Italy",
+      "startDate": "2022-11",
+      "endDate": "2024-06",
+      "summary": "Cleaning, moving and performing ordinary maintenance on cars and vans.",
+      "skills": [
+        "Car Wash",
+        "Car Maintenance"
       ]
     }
   ],
@@ -85,6 +117,14 @@
         "145065 - Network security",
         "145322 - Security testing"
       ]
+    },
+    {
+      "institution": "Universidad Politécnica de Madrid",
+      "url": "https://www.upm.es/",
+      "area": "Computer Science Engineering",
+      "studyType": "Erasmus Exchange Program",
+      "startDate": "2022-01-31",
+      "endDate": "2025-09-10"
     },
     {
       "institution": "Università degli Studi dell'Insubria",
@@ -122,20 +162,92 @@
         "SCV_CYB - Cyberchallenge",
         "SCV_FO - Systems Programming"
       ]
+    },
+    {
+      "institution": "Politecnico di Milano",
+      "url": "https://www.polimi.it",
+      "area": "Computer Science Engineering",
+      "studyType": "Bachelor Degree",
+      "startDate": "2021-09-15",
+      "endDate": "2022-07"
+    },
+    {
+      "institution": "Liceo Scientifico Enrico Fermi, Cantù",
+      "url": "https://liceofermicantu.edu.it/",
+      "area": "Scientific High School",
+      "studyType": "High School Diploma",
+      "startDate": "2016-09-15",
+      "endDate": "2021-06-17",
+      "score": "71/100"
     }
   ],
   "certificates": [
     {
-      "name": "Full Stack Web Development",
-      "date": "2023-05-01",
-      "issuer": "Online University",
-      "url": "https://onlineuniversity.com/certificates/fullstack"
+      "name": "CyberChallenge 2024",
+      "date": "2024-06",
+      "issuer": "Agenzia per la Cybersicurezza Nazionale",
+      "url": "https://cyberchallenge.it/"
     }
   ],
   "skills": [
     {
-      "name": "Gitlab",
-      "level": "Intermediate",
+      "name": "Linux",
+      "keywords": [
+        "Operating System",
+        "Command Line",
+        "Scripting"
+      ]
+    },
+    {
+      "name": "C",
+      "keywords": [
+        "Programming Language",
+        "Systems Programming",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "name": "C++",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Systems Programming"
+      ]
+    },
+    {
+      "name": "Python",
+      "keywords": [
+        "Programming Language",
+        "Scripting",
+        "Data Analysis"
+      ]
+    },
+    {
+      "name": "Shell",
+      "keywords": [
+        "Scripting Language",
+        "Command Line",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Java",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "SQL",
+      "keywords": [
+        "Database Query Language",
+        "Data Manipulation",
+        "Data Retrieval"
+      ]
+    },
+    {
+      "name": "GitHub",
       "keywords": [
         "Version Control",
         "Collaboration",
@@ -143,16 +255,110 @@
       ]
     },
     {
+      "name": "Git",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "Docker",
+      "keywords": [
+        "Containerization",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "keywords": [
+        "Container Orchestration",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Windows",
+      "keywords": [
+        "Operating System",
+        "Desktop Environment",
+        "Software Development"
+      ]
+    },
+    {
+      "name": "Greenbone",
+      "keywords": [
+        "Vulnerability Management",
+        "Security Scanning",
+        "Network Security"
+      ]
+    },
+    {
+      "name": "SGBox",
+      "keywords": [
+        "Security Information and Event Management (SIEM)",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "SIEM",
+      "keywords": [
+        "Security Information and Event Management",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "Wireshark",
+      "keywords": [
+        "Network Protocol Analyzer",
+        "Packet Capture",
+        "Network Troubleshooting"
+      ]
+    },
+    {
+      "name": "Burp Suite",
+      "keywords": [
+        "Web Application Security Testing",
+        "Penetration Testing",
+        "Vulnerability Assessment"
+      ]
+    },
+    {
+      "name": "Nmap",
+      "keywords": [
+        "Network Scanning",
+        "Port Scanning",
+        "Security Auditing"
+      ]
+    },
+    {
+      "name": "Raspberry Pi",
+      "keywords": [
+        "Single-board Computer",
+        "IoT"
+      ]
+    },
+    {
+      "name": "LaTeX",
+      "keywords": [
+        "Document Preparation",
+        "Typesetting",
+        "Scientific Writing"
+      ]
+    },
+    {
       "name": "HTML",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
-        "Frontend"
+        "Frontend",
+        "Markup Language"
       ]
     },
     {
       "name": "CSS",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -161,7 +367,6 @@
     },
     {
       "name": "JavaScript",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -170,153 +375,73 @@
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Intermediate",
+      "name": "Kotlin",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
+        "Programming Language",
+        "Android Development",
+        "Object-Oriented Programming"
       ]
     }
   ],
   "languages": [
     {
       "language": "English",
-      "fluency": "Native speaker"
+      "fluency": "C1"
+    },
+    {
+      "language": "Italian",
+      "fluency" : "Native speaker"
     },
     {
       "language": "Spanish",
-      "fluency": "Intermediate"
+      "fluency" : "A2"
     }
   ],
   "interests": [
     {
       "name": "Technology",
       "keywords": [
-        "AI",
-        "Blockchain"
+        "Programming",
+        "Cybersecurity",
+        "Virtualization",
+        "Networking",
+        "Cloud Computing"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Smith",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Personal Portfolio",
-      "isActive": false,
-      "description": "A personal portfolio website to showcase my projects and skills.",
-      "highlights": [
-        "Built with React and Tailwind CSS",
-        "Includes a blog and contact form"
-      ],
-      "url": "https://johndoe.dev",
-      "github": "https://github.com"
     },
     {
-      "name": "Weather App",
-      "isActive": true,
-      "description": "A web application that provides weather information for any location.",
-      "highlights": [
-        "Built with JavaScript and OpenWeatherMap API",
-        "Responsive design"
-      ],
-      "url": "https://weatherapp.com"
+      "name": "Car Racing",
+      "keywords": [
+        "Formula SAE",
+        "Racing",
+        "Telemetry",
+        "GT3",
+        "DMT"
+      ]
     },
     {
-      "name": "Task Manager",
-      "isActive": true,
-      "description": "A simple task management app to keep track of daily tasks.",
-      "highlights": [
-        "Built with Node.js and MongoDB",
-        "User authentication and CRUD operations"
-      ],
-      "url": "https://taskmanager.com",
-      "github": "https://github.com"
+      "name": "Motorcycles",
+      "keywords": [
+        "Kawasaki",
+        "Ninja 400",
+        "Rides"
+      ]
     },
     {
-      "name": "E-commerce Site",
-      "isActive": false,
-      "description": "An online store built with Next.js and Stripe for payment processing.",
-      "highlights": [
-        "Product management and shopping cart functionality",
-        "Secure payment integration"
-      ],
-      "url": "https://ecommerce.com"
+      "name": "Skii Mountaineering",
+      "keywords": [
+        "Mountain",
+        "Alpinism",
+        "Snow",
+        "Skiing"
+      ]
+    },
+    {
+      "name": "Alpinism",
+      "keywords": [
+        "Mountain",
+        "Climbing",
+        "Hiking"
+      ]
     }
   ]
 }
