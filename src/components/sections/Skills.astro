@@ -20,12 +20,12 @@ import Gitlab from "@/icons/Gitlab.astro";
 import C from "@/icons/C.astro";
 import Cpp from "@/icons/cpp.astro";
 import Python from "@/icons/Python.astro";
-import Linux from "@/icons/tux.astro";
+import Linux from "@/icons/Linux.astro";
 import Shell from "@/icons/Shell.astro";
 import Java from "@/icons/Java.astro";
 import SQL from "@/icons/SQL.astro";
 import Docker from "@/icons/Docker.astro";
-import Kubernetes from "@/icons/Kubernetes.astro";
+import Kubernetes from "@/icons/KubernetesIcon.astro";
 import Windows from "@/icons/Windows.astro";
 import Greenbone from "@/icons/greenbone.astro";
 import SGBox from "@/icons/sgbox.astro";
@@ -33,7 +33,7 @@ import Wireshark from "@/icons/Wireshark.astro";
 import BurpSuite from "@/icons/BurpSuite.astro";
 import Nmap from "@/icons/nmap.astro";
 import LaTeX from "@/icons/LaTeX.astro";
-import RaspberryPi from "@/icons/raspi.astro";
+import Raspberry from "@/icons/raspberrypi.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
 	HTML,
@@ -53,7 +53,7 @@ const SKILLS_ICONS: Record<string, any> = {
 	Figma,
 	Gitlab,
 	C,
-	Cpp,
+	"C++": Cpp,
 	Python,
 	Linux,
 	Shell,
@@ -68,19 +68,21 @@ const SKILLS_ICONS: Record<string, any> = {
 	BurpSuite,
 	Nmap,
 	LaTeX,
-	RaspberryPi
+	"Raspberry Pi": Raspberry,
 };
 ---
 
 <Section className={Astro.props.className} title="Skills">
-	<ul class="[&>li>svg]:text-skin-hue inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm">
+	<ul
+		class="[&>li>svg]:text-skin-hue inline-flex flex-wrap gap-6 [&>li>svg]:size-5 [&>li]:text-sm"
+	>
 		{
 			skills.map(({ name }) => {
 				const iconName = name === "Next.js" ? "Next" : name;
 				const Icon = SKILLS_ICONS[iconName];
 
 				return (
-					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex items-center gap-1 rounded-md px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids text-skin-muted flex items-center gap-1 rounded-md px-2 py-0.5 text-xs print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
 						{Icon && <Icon />} <span>{name}</span>
 					</li>
 				);

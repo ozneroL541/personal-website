@@ -30,17 +30,17 @@
 
 ### 1. Use this Repo as an Astro Project Template
 
-- I use [pnpm](https://pnpm.io/installation) as my package manager.
+- I use [npm](https://npm.io/installation) as my package manager.
 
 ```bash
-# Enable pnpm on MacOS, WSL & Linux:
+# Enable npm on MacOS, WSL & Linux:
 corepack enable
-corepack prepare pnpm@latest --activate
+corepack prepare npm@latest --activate
 ```
 
 # Initialize the project
 ```bash
-pnpm create astro@latest -- --template Smilesharks/dev-portfolio
+npm create astro@latest -- --template Smilesharks/dev-portfolio
 ```
 
 ### 2. Add Your Content:
@@ -51,7 +51,7 @@ Edit the `cv.json` file to create your own printable Portfolio/CV.
 
 ```bash
 # Enjoy the results
-pnpm dev
+npm dev
 ```
 1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view the result 🚀
 
