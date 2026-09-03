@@ -1,0 +1,476 @@
+{
+  "basics": {
+    "name": "Lorenzo Radice",
+    "label": "Studente di Informatica",
+    "image": "/photo.png",
+    "email": "radicelorenzo@libero.it",
+    "phone": "+39 340 122 6028",
+    "url": "https://radicelorenzo.eu",
+    "summary": "Attualmente sono uno studente magistrale in Informatica presso l'Università di Trento, specializzando in Cybersecurity. Membro ufficiale del team E-Agle Trento Racing Team, dove lavoro come telemetrista.",
+    "theme": "blue",
+    "location": {
+      "address": "",
+      "postalCode": "22030",
+      "city": "Como",
+      "countryCode": "IT",
+      "region": "Lombardia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "lorenzo-radice-99a679292",
+        "url": "https://www.linkedin.com/in/lorenzo-radice-99a679292/"
+      },
+      {
+        "network": "GitHub",
+        "username": "ozneroL541",
+        "url": "https://github.com/ozneroL541"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "E-Agle Trento Racing Team",
+      "position": "Telemetrista",
+      "location_type": "In loco",
+      "location": "Trento, Italia",
+      "url": "https://eagletrt.it",
+      "startDate": "2025-11-19",
+      "summary": "Orgogliosamente membro ufficiale del E-Agle Trento Racing Team, un team universitario composto esclusivamente da studenti, che progetta, costruisce e gareggia con una monoposto elettrica nelle competizioni Formula SAE.",
+      "highlights": [
+        "Ho lavorato un anno come Telemetry Technician nel E-Agle Trento Racing Team, sviluppando il sistema di telemetria interno che permette al team di monitorare i segnali della macchina in tempo reale durante i test e le gare.",
+      ],
+      "achievements": [
+        "I effettuato ricerche sull'ottimizzazione di una funzione che permette al sistema di telemetria di migliorare significativamente la deserializzazione dei messaggi ricevuti dalla macchina.",
+        "Ho creato un overlay SPI to CAN completamente funzionante su un Raspberry Pi 5 per permettere al sistema di telemetria di comunicare direttamente con il bus CAN della macchina.",
+        "Ho effettuato ricerche su quale database utilizzare per il nostro sistema di telemetria leggendo documentazioni e effettuando simulazioni per trovare la soluzione migliore per le nostre esigenze.",
+        "Ho progettato e implementato il sistema che permette al sistema di telemetria di comunicare con il database dei segnali dei sensori."
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "Raspberry Pi",
+        "CAN",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "name": "Uniweb Srl",
+      "position": "Tirocinio Curriculare",
+      "location_type": "In loco",
+      "location": "Cantù, Italia",
+      "url": "https://www.uniweb.it/",
+      "startDate": "2025-06-03",
+      "endDate": "2025-09-10",
+      "summary": "Gestion di una piattaforma di Cybersecurity e attività di Risk Management. Configurazione e gestione del SGBox SIEM con integrazione di fonti dati e correlazione dei dati per analizzare gli attacchi informatici su un'infrastruttura di rete ad alta disponibilità basata su un ambiente di virtualizzazione VMware.Acquisizione di competenze nella raccolta dei dati e nella correlazione degli eventi su un innovativo sistema di Security Information and Event Management.Scansioni di vulnerabilità su una varietà di host con Qualys e Greenbone.",
+      "achievements": [
+        "Ho configurato e gestito la piattaforma SGBox SIEM, integrando varie fonti di dati e implementando tecniche di correlazione dei dati per analizzare gli attacchi informatici su un ambiente industriale di produzione.",
+        "Ho acquisito competenze nella raccolta dei dati e nella correlazione degli eventi su un innovativo sistema di Security Information and Event Management.",
+        "Ho condotto scansioni di vulnerabilità su una varietà di host utilizzando Qualys e Greenbone, identificando potenziali rischi di sicurezza e fornendo raccomandazioni per la mitigazione."
+      ],
+      "skills": [
+        "SGBox",
+        "Regex",
+        "Greenbone"
+      ]
+    },
+    {
+      "name": "Università degli Studi dell'Insubria",
+      "position": "Tutor",
+      "location_type": "In loco",
+      "location": "Varese, Italia",
+      "url": "https://www.uninsubria.it/",
+      "startDate": "2025-02",
+      "endDate": "2025-07",
+      "summary": "Attività di tutoraggio per il corso CyberChallenge.IT 2025 presso l'Università degli Studi dell'Insubria. Sono il vincitore della competizione locale CyberChallenge.IT 2024 e ho partecipato alla competizione nazionale a Torino con altri 5 studenti, rappresentando l'Università degli Studi dell'Insubria. Dopo questa esperienza di successo, sono stato scelto come mentore per la successiva edizione del corso accademico.",
+      "achievements": [
+        "Ho tenuto una lezione su Docker e Networking per il corso CyberChallenge.IT 2025 presso l'Università degli Studi dell'Insubria.",
+        "Ho aiutato in varie attività di esercizio su challenge di Capture The Flag (CTF)."
+      ],
+      "skills": [
+        "Wireshark",
+        "BurpSuite",
+        "Nmap",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Europcar Como",
+      "position": "Car wash attendant",
+      "location_type": "In loco",
+      "location": "Como, Italia",
+      "url": "https://www.europcar.com/",
+      "startDate": "2022-11",
+      "endDate": "2024-06",
+      "summary": "Pulizia, spostamento e manutenzione ordinaria di auto e furgoni.",
+      "achievements": [
+        "Ho contribuito alla manutenzione e pulizia di auto e van.",
+        "Ho migliorato le mie capacità di lavoro in team."
+      ],
+      "skills": [
+        "Car Wash",
+        "Car Maintenance"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Università degli Studi di Trento",
+      "url": "https://www.unitn.it/",
+      "area": "Informatica",
+      "studyType": "Laurea Magistrale",
+      "startDate": "2025-09-10",
+      "courses": [
+        "145777 - Applied Cryptography",
+        "145​451 - Computability and computational complexity",
+        "145622 - Cyber Security Risk Assessment",
+        "146223 - Distributed systems",
+        "145771 - Fog and Cloud Computing",
+        "145761 - Innovation and Business in ICT",
+        "145937 - Introduction to Computer and Network Security",
+        "145065 - Network security",
+        "145322 - Security testing"
+      ]
+    },
+    {
+      "institution": "Universidad Politécnica de Madrid",
+      "url": "https://www.upm.es/",
+      "area": "Ingegneria Informatica",
+      "studyType": "Programma Erasmus",
+      "startDate": "2023-09-10",
+      "endDate": "2024-01-31"
+    },
+    {
+      "institution": "Università degli Studi dell'Insubria",
+      "url": "https://www.uninsubria.it",
+      "area": "Informatica",
+      "studyType": "Laurea Triennale",
+      "startDate": "2022-09-15",
+      "endDate": "2025-10-17",
+      "score": "105/110",
+      "courses": [
+        "SCV0002 - Algebra e Geometria",
+        "SCV0006 - Analisi Matematica",
+        "SCV0016 - Architettura degli Elaboratori",
+        "SCV0017 - Algoritmi e Strutture Dati",
+        "SCV0019 - Programmazione",
+        "SCV0026 - Programmazione Concorrente e Distribuita",
+        "SCV0030 - Sistemi Operativi",
+        "SCV0035 - Progettazione del Software",
+        "SCV0040 - Basi di Dati",
+        "SCV0072 - Prova Finale",
+        "SCV0077 - Sistemi Informativi",
+        "SCV0134 - Inglese",
+        "SCV0221 - Tirocinio Formativo",
+        "SCV0314 - Logica",
+        "SCV0317 - Fondamenti di Sicurezza",
+        "SCV0325 - Reti di Telecomunicazione",
+        "SCV0327 - Automi e Linguaggi",
+        "SCV0452 - Laboratorio Interdisciplinare A e B",
+        "SCV0455 - Test di Verifica delle Conoscenze",
+        "SCV0456 - Programmazione Procedurale e ad Oggetti",
+        "SCV0609 - Probabilità e Statistica per l'Informatica",
+        "SCV0831 - Big Data",
+        "SCV0832 - Basi di Dati II",
+        "SCV0908 - Tecnologie Innovative per lo Sviluppo Web",
+        "SCV_CYB - Cyberchallenge",
+        "SCV_FO - Systems Programming"
+      ]
+    },
+    {
+      "institution": "Politecnico di Milano",
+      "url": "https://www.polimi.it",
+      "area": "Ingegneria Informatica",
+      "studyType": "Laurea Triennale",
+      "startDate": "2021-09-15",
+      "endDate": "2022-07"
+    },
+    {
+      "institution": "Liceo Scientifico Enrico Fermi, Cantù",
+      "url": "https://liceofermicantu.edu.it/",
+      "area": "Liceo Scientifico N.O.",
+      "studyType": "Diploma di Scuola Superiore",
+      "startDate": "2016-09-15",
+      "endDate": "2021-06-17",
+      "score": "71/100"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "IELTS",
+      "date": "2025-08",
+      "issuer": "British Council",
+      "url": "https://www.ielts.org/"
+    },
+    {
+      "name": "CyberChallenge 2024",
+      "date": "2024-06",
+      "issuer": "Agenzia per la Cybersicurezza Nazionale",
+      "url": "https://cyberchallenge.it/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Linux",
+      "keywords": [
+        "Operating System",
+        "Command Line",
+        "Scripting"
+      ]
+    },
+    {
+      "name": "C",
+      "keywords": [
+        "Programming Language",
+        "Systems Programming",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "name": "C++",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Systems Programming"
+      ]
+    },
+    {
+      "name": "Python",
+      "keywords": [
+        "Programming Language",
+        "Scripting",
+        "Data Analysis"
+      ]
+    },
+    {
+      "name": "Shell",
+      "keywords": [
+        "Scripting Language",
+        "Command Line",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Java",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "SQL",
+      "keywords": [
+        "Database Query Language",
+        "Data Manipulation",
+        "Data Retrieval"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "Git",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "Docker",
+      "keywords": [
+        "Containerization",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "keywords": [
+        "Container Orchestration",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Windows",
+      "keywords": [
+        "Operating System",
+        "Desktop Environment",
+        "Software Development"
+      ]
+    },
+    {
+      "name": "Greenbone",
+      "keywords": [
+        "Vulnerability Management",
+        "Security Scanning",
+        "Network Security"
+      ]
+    },
+    {
+      "name": "SGBox",
+      "keywords": [
+        "Security Information and Event Management (SIEM)",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "SIEM",
+      "keywords": [
+        "Security Information and Event Management",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "Wireshark",
+      "keywords": [
+        "Network Protocol Analyzer",
+        "Packet Capture",
+        "Network Troubleshooting"
+      ]
+    },
+    {
+      "name": "BurpSuite",
+      "keywords": [
+        "Web Application Security Testing",
+        "Penetration Testing",
+        "Vulnerability Assessment"
+      ]
+    },
+    {
+      "name": "Regex",
+      "keywords": [
+        "Regular Expressions",
+        "Pattern Matching",
+        "Text Processing"
+      ]
+    },
+    {
+      "name": "Nmap",
+      "keywords": [
+        "Network Scanning",
+        "Port Scanning",
+        "Security Auditing"
+      ]
+    },
+    {
+      "name": "Raspberry Pi",
+      "keywords": [
+        "Single-board Computer",
+        "IoT"
+      ]
+    },
+    {
+      "name": "LaTeX",
+      "keywords": [
+        "Document Preparation",
+        "Typesetting",
+        "Scientific Writing"
+      ]
+    },
+    {
+      "name": "HTML",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Markup Language"
+      ]
+    },
+    {
+      "name": "CSS",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Kotlin",
+      "keywords": [
+        "Programming Language",
+        "Android Development",
+        "Object-Oriented Programming"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Inglese",
+      "fluency": "C1"
+    },
+    {
+      "language": "Italiano",
+      "fluency" : "Madrelingua"
+    },
+    {
+      "language": "Spagnolo",
+      "fluency" : "A2"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Technology",
+      "keywords": [
+        "Programming",
+        "Cybersecurity",
+        "Virtualization",
+        "Networking",
+        "Cloud Computing"
+      ]
+    },
+    {
+      "name": "Car Racing",
+      "keywords": [
+        "Formula SAE",
+        "Racing",
+        "Telemetry",
+        "GT3",
+        "DMT"
+      ]
+    },
+    {
+      "name": "Motorcycles",
+      "keywords": [
+        "Kawasaki",
+        "Ninja 400",
+        "Rides"
+      ]
+    },
+    {
+      "name": "Skii Mountaineering",
+      "keywords": [
+        "Mountain",
+        "Alpinism",
+        "Snow",
+        "Skiing"
+      ]
+    },
+    {
+      "name": "Alpinism",
+      "keywords": [
+        "Mountain",
+        "Climbing",
+        "Hiking"
+      ]
+    }
+  ]
+}
