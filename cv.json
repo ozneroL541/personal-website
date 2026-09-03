@@ -63,12 +63,13 @@
       "startDate": "2025-06-03",
       "endDate": "2025-09-10",
       "summary": "Managing a Cybersecurity Platform and Risk Management Activities. SGBox SIEM configuration and managment with integration of data sources and data correlation to analyze cyberattacks on a high-availability network infrastructure based on a VMware virtualization environment.Acquisition of expertise in data collection and event correlation on an innovative Security Information and Event Management system.Vulnerability Scans on a variety of hosts with Qualys and Greenbone.",
+      "achievements": [
+        "I configured and managed the SGBox SIEM platform, integrating various data sources and implementing data correlation techniques to analyze cyberattacks on a production industrial environment.",
+        "I acquired expertise in data collection and event correlation on an innovative Security Information and Event Management system.",
+        "I conducted vulnerability scans on a variety of hosts using Qualys and Greenbone, identifying potential security risks and providing recommendations for mitigation."
+      ],
       "skills": [
-        "SIEM",
-        "SGBox",
         "Regex",
-        "Vulnerability Scans",
-        "Qualys",
         "Greenbone"
       ]
     },
@@ -81,10 +82,15 @@
       "startDate": "2025-02",
       "endDate": "2025-07",
       "summary": "Tutoring activity for the CyberChallenge.IT 2025 course at the University of Insubria. I'm the winner of the CyberChallenge.IT 2024 local competition and  I took part in the national competition in Turin with 5 other students, representing the University of Insubria. After this successful experience, I was chosen as a mentor for the following edition of the academic course.",
+      "achievements": [
+        "I held a lecture about Docker and Networking for the CyberChallenge.IT 2025 course at the University of Insubria.",
+        "I helped in variuos exercise activities about Capture The Flag (CTF) challenges"
+      ],
       "skills": [
-        "Cybersecurity",
-        "Network Security",
-        "Mentoring"
+        "Wireshark",
+        "BurpSuite",
+        "Nmap",
+        "Docker"
       ]
     },
     {
@@ -185,6 +191,12 @@
     }
   ],
   "certificates": [
+    {
+      "name": "IELTS",
+      "date": "2025-08",
+      "issuer": "British Council",
+      "url": "https://www.ielts.org/"
+    },
     {
       "name": "CyberChallenge 2024",
       "date": "2024-06",

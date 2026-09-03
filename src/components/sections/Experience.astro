@@ -21,9 +21,14 @@ import C from "@/icons/C.astro"
 import Cpp from "@/icons/cpp.astro";
 import Linux from "@/icons/tux.astro";
 import Shell from "@/icons/Shell.astro";
-//import Cpp from "@/icons/cpp.astro";
-//import Python from "@/icons/Python.astro";
-//import CAN from "@/icons/CAN.astro";
+import Python from "@/icons/Python.astro";
+import CAN from "@/icons/CAN.astro";
+import Wireshark from "@/icons/Wireshark.astro";
+import Regex from "@/icons/regex.astro";
+import Docker from "@/icons/Docker.astro";
+import Greenbone from "@/icons/greenbone.astro";
+import BurpSuite from "@/icons/BurpSuite.astro";
+import Nmap from "@/icons/nmap.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -45,9 +50,15 @@ const SKILLS_ICONS: Record<string, any> = {
   Cpp,
   Linux,
   Shell,
-  //"C++": Cpp,
-  //Python,
-  //CAN
+  "C++": Cpp,
+  Python,
+  Wireshark,
+  Regex,
+  Docker,
+  Greenbone,
+  BurpSuite,
+  CAN,
+  Nmap
 }
 ---
 <Section className={Astro.props.className} title="Experience">
@@ -134,7 +145,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 </button>
 
 
-                <ul class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
+                <ul class="flex print:hidden flex-wrap gap-2 [&>li>svg]:size-5 [&>li>svg]:shrink-0" aria-label="Technologies used">
                   {skills && skills.map(skill => {
                     const iconName = skill === "Next.js" ? "Next" : skill
                     const Icon = SKILLS_ICONS[iconName]
