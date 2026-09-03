@@ -49,6 +49,7 @@
       "skills": [
         "Python",
         "C++",
+        "Raspberry Pi",
         "CAN",
         "Git",
         "GitHub"
@@ -69,6 +70,7 @@
         "I conducted vulnerability scans on a variety of hosts using Qualys and Greenbone, identifying potential security risks and providing recommendations for mitigation."
       ],
       "skills": [
+        "SGBox",
         "Regex",
         "Greenbone"
       ]
