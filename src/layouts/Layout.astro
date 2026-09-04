@@ -1,7 +1,7 @@
 ---
-import { basics } from "@cv";
 import Vengeance from "@/layouts/Vengeance.astro";
 import "@/styles/global.css";
+import { getCV, getLang, useTranslations } from "@/i18n/utils";
 
 interface Props {
 	title: string;
@@ -9,11 +9,22 @@ interface Props {
 
 const { title } = Astro.props;
 
+const lang = getLang(Astro.currentLocale);
+const t = useTranslations(lang);
+const { basics } = getCV(lang);
 const { image, summary, url, theme } = basics;
+
+// Read by the theme-selector script below so its labels are translated
+// without turning the script into an inline (non-bundled) one.
+const themeLabels = {
+	system: t("theme.system"),
+	light: t("theme.light"),
+	dark: t("theme.dark"),
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -39,7 +50,7 @@ const { image, summary, url, theme } = basics;
 
 		<Vengeance />
 	</head>
-	<body data-theme={theme} class="relative bg-skin-fill">
+	<body data-theme={theme} data-theme-labels={JSON.stringify(themeLabels)} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
 			<div class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"></div>
 		</div>
@@ -135,46 +146,65 @@ const { image, summary, url, theme } = basics;
 			Alpine.plugin(collapse);
 
 			// Theme selector component
-			Alpine.data("themeSelector", () => ({
-				open: false,
-				currentTheme: "system",
-				themes: [
-					{ value: "system", label: "System", icon: "computer" },
-					{ value: "light", label: "Light", icon: "sun" },
-					{ value: "dark", label: "Dark", icon: "moon" },
-				],
+			interface ThemeLabels {
+				system: string;
+				light: string;
+				dark: string;
+			}
 
-				init() {
-					const savedTheme = localStorage.getItem("theme");
-					this.currentTheme = savedTheme || "system";
-					this.applyTheme(this.currentTheme);
+			function getThemeLabels(): ThemeLabels {
+				const fallback: ThemeLabels = { system: "System", light: "Light", dark: "Dark" };
+				try {
+					return JSON.parse(document.body.dataset.themeLabels ?? "") ?? fallback;
+				} catch {
+					return fallback;
+				}
+			}
 
-					window
-						.matchMedia("(prefers-color-scheme: dark)")
-						.addEventListener("change", () => {
-							if (this.currentTheme === "system") {
-								this.applyTheme("system");
-							}
-						});
-				},
+			Alpine.data("themeSelector", () => {
+				const labels = getThemeLabels();
 
-				selectTheme(value: string) {
-					this.currentTheme = value;
-					this.applyTheme(value);
-					localStorage.setItem("theme", value);
-					this.open = false;
-				},
+				return {
+					open: false,
+					currentTheme: "system",
+					themes: [
+						{ value: "system", label: labels.system, icon: "computer" },
+						{ value: "light", label: labels.light, icon: "sun" },
+						{ value: "dark", label: labels.dark, icon: "moon" },
+					],
 
-				applyTheme(value: string) {
-					const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-						.matches
-						? "dark"
-						: "light";
-					const theme = value === "system" ? systemTheme : value;
-					document.documentElement.classList.remove("light", "dark");
-					document.documentElement.classList.add(theme);
-				},
-			}));
+					init() {
+						const savedTheme = localStorage.getItem("theme");
+						this.currentTheme = savedTheme || "system";
+						this.applyTheme(this.currentTheme);
+
+						window
+							.matchMedia("(prefers-color-scheme: dark)")
+							.addEventListener("change", () => {
+								if (this.currentTheme === "system") {
+									this.applyTheme("system");
+								}
+							});
+					},
+
+					selectTheme(value: string) {
+						this.currentTheme = value;
+						this.applyTheme(value);
+						localStorage.setItem("theme", value);
+						this.open = false;
+					},
+
+					applyTheme(value: string) {
+						const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+							.matches
+							? "dark"
+							: "light";
+						const theme = value === "system" ? systemTheme : value;
+						document.documentElement.classList.remove("light", "dark");
+						document.documentElement.classList.add(theme);
+					},
+				};
+			});
 
 			Alpine.start();
 		</script>

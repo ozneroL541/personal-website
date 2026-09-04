@@ -12,15 +12,16 @@
 ## ✨ Features
 
 - **Print-friendly** - Optimised layout for PDF export and printing
+- **Multilingual** - English and Italian out of the box, easy to extend with more languages
 - **Dark/Light mode** - System preference detection with manual override
 - **5 Colour themes** - Default, blue, red, green, and cyber themes
 - **Keyboard shortcuts** - Command palette with `Cmd/Ctrl + K`
 - **Responsive design** - Mobile-first approach with Tailwind CSS 4
-- **JSON-based content** - Easy content management via `cv.json`
+- **JSON-based content** - Easy content management via one JSON file per language
 
 ## 🛠️ Stack
 
-- [**Astro**](https://astro.build/) - The next-gen web framework.
+- [**Astro**](https://astro.build/) - The next-gen web framework (using its built-in [i18n routing](https://docs.astro.build/en/guides/internationalization/)).
 - [**Tailwind CSS 4**](https://tailwindcss.com/) - A utility-first CSS framework with CSS-first configuration.
 - [**Alpine.js**](https://alpinejs.dev/) - Lightweight JavaScript framework for composing behaviour.
 - [**Typescript**](https://www.typescriptlang.org/) - JavaScript with type syntax.
@@ -45,7 +46,8 @@ npm create astro@latest -- --template Smilesharks/dev-portfolio
 
 ### 2. Add Your Content:
 
-Edit the `cv.json` file to create your own printable Portfolio/CV.
+CV content lives under `src/i18n/data/`, one JSON file per language (e.g. `en.json`, `it.json`).
+Edit those files to create your own printable Portfolio/CV in each language you support.
 
 ### 3. Launch the Development Server:
 
@@ -57,7 +59,7 @@ npm dev
 
 ### 4. Customisable colours:
 
-Change the `theme` property in `cv.json` and choose one of the available colour themes:
+Change the `theme` property in `src/i18n/data/en.json` (and your other language files) and choose one of the available colour themes:
 
 | Theme | Description |
 |-------|-------------|
@@ -72,6 +74,20 @@ Each theme includes light and dark mode variants. The theme selector dropdown al
 **Creating custom themes:**
 
 Edit `src/styles/global.css` and add your theme variables under the appropriate selectors (`:root [data-theme="your-theme"]` for light mode, `.dark [data-theme="your-theme"]` for dark mode).
+
+### 5. Adding a language:
+
+The site is available in English (`/`) and Italian (`/it/`). To add another language (e.g. Spanish, `es`):
+
+1. Add its code and display name to `languages` in `src/i18n/config.ts`.
+2. Copy `src/i18n/data/en.json` to `src/i18n/data/es.json` and translate its values.
+3. Copy every key in the `en` block of `src/i18n/ui.ts` into a new `es` block and translate the UI strings (section titles, buttons, labels...).
+4. Add `"es"` to `locales` in `astro.config.mjs`.
+5. Create `src/pages/es/index.astro` with the same one-line content as `src/pages/it/index.astro`.
+
+TypeScript will flag any of these steps you forget: `src/i18n/cv.ts` and `src/i18n/ui.ts` both require an entry for every language registered in `src/i18n/config.ts`, so a half-added language fails `astro check` instead of shipping silently broken.
+
+The language switcher (next to the theme switcher) picks up new entries in `languages` automatically.
 
 ## 🧞 Commands
 
