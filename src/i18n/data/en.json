@@ -114,6 +114,7 @@
   "education": [
     {
       "institution": "Università degli Studi di Trento",
+      "location": "Trento, Italy",
       "url": "https://www.unitn.it/",
       "area": "Computer Science",
       "studyType": "Master Degree",
@@ -132,6 +133,7 @@
     },
     {
       "institution": "Universidad Politécnica de Madrid",
+      "location": "Madrid, Spain",
       "url": "https://www.upm.es/",
       "area": "Computer Science Engineering",
       "studyType": "Erasmus Exchange Program",
@@ -140,6 +142,7 @@
     },
     {
       "institution": "Università degli Studi dell'Insubria",
+      "location": "Como, Italy",
       "url": "https://www.uninsubria.it",
       "area": "Computer Science",
       "studyType": "Bachelor Degree",
@@ -178,6 +181,7 @@
     {
       "hide": true,
       "institution": "Politecnico di Milano",
+      "location": "Milano, Italy",
       "url": "https://www.polimi.it",
       "area": "Computer Science Engineering",
       "studyType": "Bachelor Degree",
@@ -186,6 +190,7 @@
     },
     {
       "institution": "Liceo Scientifico Enrico Fermi, Cantù",
+      "location": "Cantù, Italy",
       "url": "https://liceofermicantu.edu.it/",
       "area": "Scientific High School",
       "studyType": "High School Diploma",

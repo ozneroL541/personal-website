@@ -116,6 +116,7 @@ interface Publications {
 interface Education {
   institution: string;
   url: string;
+  location?: string;
   area: string;
   studyType: string;
   startDate: DateStr;

@@ -119,6 +119,7 @@
     {
       "institution": "Università degli Studi di Trento",
       "url": "https://www.unitn.it/",
+      "location": "Trento, Italia",
       "area": "Informatica",
       "studyType": "Laurea Magistrale",
       "startDate": "2025-09-10",
@@ -136,6 +137,7 @@
     },
     {
       "institution": "Universidad Politécnica de Madrid",
+      "location": "Madrid, Spagna",
       "url": "https://www.upm.es/",
       "area": "Ingegneria Informatica",
       "studyType": "Programma Erasmus",
@@ -145,6 +147,7 @@
     {
       "institution": "Università degli Studi dell'Insubria",
       "url": "https://www.uninsubria.it",
+      "location": "Como, Italia",
       "area": "Informatica",
       "studyType": "Laurea Triennale",
       "startDate": "2022-09-15",
@@ -182,6 +185,7 @@
     {
       "hide": true,
       "institution": "Politecnico di Milano",
+      "location": "Milano, Italia",
       "url": "https://www.polimi.it",
       "area": "Ingegneria Informatica",
       "studyType": "Laurea Triennale",
@@ -190,6 +194,7 @@
     },
     {
       "institution": "Liceo Scientifico Enrico Fermi, Cantù",
+      "location": "Cantù, Italia",
       "url": "https://liceofermicantu.edu.it/",
       "area": "Liceo Scientifico N.O.",
       "studyType": "Diploma di Scuola Superiore",

@@ -10,7 +10,7 @@ const { education, certificates } = getCV(lang);
 <Section className={Astro.props.className} title={t("section.education")}>
 	<ul class="space-y-4 py-3 print:space-y-0">
 		{
-			education.map(({ institution, startDate, endDate, area, studyType, score, url }) => {
+			education.map(({ institution, startDate, endDate, area, studyType, score, url, location }) => {
 				const startYear = new Date(startDate).getFullYear();
 				const endYear = endDate != null ? new Date(endDate).getFullYear() : t("common.present");
 				const years = `${startYear} - ${endYear}`;
@@ -31,6 +31,7 @@ const { education, certificates } = getCV(lang);
 							<div class="text-sm text-skin-muted">
 								{area}{area && studyType && " - "}{studyType}
 							</div>
+							{location && <div class="text-sm text-skin-muted">{location}</div>}
 							{score && <div class="text-sm text-skin-muted">{score}</div>}
 							<time class="right-0 top-0 text-xs text-skin-muted md:absolute md:block">{years}</time>
 						</div>
