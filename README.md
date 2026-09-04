@@ -75,7 +75,30 @@ Each theme includes light and dark mode variants. The theme selector dropdown al
 
 Edit `src/styles/global.css` and add your theme variables under the appropriate selectors (`:root [data-theme="your-theme"]` for light mode, `.dark [data-theme="your-theme"]` for dark mode).
 
-### 5. Adding a language:
+### 5. Hiding an entry without deleting it:
+
+Add `"hid": true` to any entry in a work, education, certificate, skill, or
+project array (in any `src/i18n/data/*.json` file) to remove it from the
+website without deleting it from the JSON:
+
+```jsonc
+{
+  "work": [
+    {
+      "name": "Old Company",
+      "position": "Intern",
+      // ...
+      "hid": true // this job is hidden, but stays in the file
+    }
+  ]
+}
+```
+
+`hid` is checked per language file, so an entry can be hidden in one
+language and shown in another if that's ever useful — but for a normal
+"hide this everywhere" case, set it the same way in every language file.
+
+### 6. Adding a language:
 
 The site is available in English (`/en/`) and Italian (`/it/`); the bare `/` redirects to `/en/`. To add another language (e.g. Spanish, `es`):
 

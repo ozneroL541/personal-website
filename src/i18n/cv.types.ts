@@ -8,18 +8,26 @@
  */
 export interface CV {
   basics: Basics;
-  work: Array<Work>;
-  volunteer?: Array<Volunteer>;
-  education: Array<Education>;
-  awards?: Array<Awards>;
-  certificates?: Array<Certificates>;
-  publications?: Array<Publications>;
-  skills: Array<Skills>;
-  languages: Array<Languages>;
-  interests?: Array<Interests>;
-  references?: Array<References>;
-  projects?: Array<Projects>;
+  work: Array<Hideable<Work>>;
+  volunteer?: Array<Hideable<Volunteer>>;
+  education: Array<Hideable<Education>>;
+  awards?: Array<Hideable<Awards>>;
+  certificates?: Array<Hideable<Certificates>>;
+  publications?: Array<Hideable<Publications>>;
+  skills: Array<Hideable<Skills>>;
+  languages: Array<Hideable<Languages>>;
+  interests?: Array<Hideable<Interests>>;
+  references?: Array<Hideable<References>>;
+  projects?: Array<Hideable<Projects>>;
 }
+
+/**
+ * Any entry in one of the arrays above (a job, a degree, a skill, a
+ * project...) can be marked `"hid": true` in the JSON data to hide it from
+ * the website without deleting it. See `getCV()` in `./cv.ts`, which strips
+ * these out before the data reaches any component.
+ */
+export type Hideable<T> = T & { hid?: boolean };
 
 export type Theme = "default" | "blue" | "red" | "green" | "cyber" | string;
 

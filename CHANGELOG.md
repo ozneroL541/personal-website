@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Multilingual support (English and Italian) using Astro's built-in i18n routing (`/` for English, `/it/` for Italian)
+- `"hid": true` flag: any entry in a work, education, certificate, skill,
+  or project array can be hidden from the site without deleting it from
+  the JSON data (checked per language file, filtered centrally in
+  `src/i18n/cv.ts` so no component has to remember to check it)
+- Multilingual support (English and Italian) using Astro's built-in i18n routing (`/en/` and `/it/`, `/` redirects to `/en/`)
 - `src/i18n/` module: per-language CV data loader (`cv.ts`), typed UI-string dictionary (`ui.ts`) with `useTranslations()`/`t()` helper, and a single `config.ts` registry for adding new languages
 - Language switcher component (`LanguageSwitch.astro`) next to the theme switcher
 - Alpine.js dropdown for theme selector with animated icons (sun/moon/computer)
