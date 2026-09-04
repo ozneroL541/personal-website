@@ -1,9 +1,6 @@
 ---
-// This is the default-locale page (English, served at `/`).
-// To add another language, create `src/pages/<code>/index.astro` the same
-// way as `src/pages/it/index.astro` does. All the actual markup and data
-// loading lives in `Home.astro`, which picks the right language on its own.
-import Home from "@/components/Home.astro";
+// Astro requires a root index page to exist so it can turn it into the
+// `/` -> `/en/` redirect at build time (see `i18n.routing.prefixDefaultLocale`
+// in astro.config.mjs). Its content below is never actually served; Astro
+// replaces this page with the redirect during the build.
 ---
-
-<Home />

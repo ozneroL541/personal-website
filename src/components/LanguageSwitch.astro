@@ -1,6 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { getLang, languages, useTranslations } from "@/i18n/utils";
+import { getLang, languages, locales, useTranslations } from "@/i18n/utils";
 
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
@@ -8,10 +8,11 @@ const t = useTranslations(lang);
 // Astro.url already points at the current page; getRelativeLocaleUrl swaps
 // only the locale prefix, so this keeps working if more pages are added later.
 const path = Astro.url.pathname;
+const localePrefix = new RegExp(`^/(${locales.join("|")})(/|$)`);
 const options = Object.entries(languages).map(([code, label]) => ({
 	code,
 	label,
-	url: getRelativeLocaleUrl(code, path.replace(/^\/(en|it)(\/|$)/, "/")),
+	url: getRelativeLocaleUrl(code, path.replace(localePrefix, "/")),
 }));
 ---
 

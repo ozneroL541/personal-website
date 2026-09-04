@@ -77,7 +77,7 @@ Edit `src/styles/global.css` and add your theme variables under the appropriate 
 
 ### 5. Adding a language:
 
-The site is available in English (`/`) and Italian (`/it/`). To add another language (e.g. Spanish, `es`):
+The site is available in English (`/en/`) and Italian (`/it/`); the bare `/` redirects to `/en/`. To add another language (e.g. Spanish, `es`):
 
 1. Add its code and display name to `languages` in `src/i18n/config.ts`.
 2. Copy `src/i18n/data/en.json` to `src/i18n/data/es.json` and translate its values.

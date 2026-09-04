@@ -1,0 +1,10 @@
+---
+// English locale, served at `/en/` (the site root `/` redirects here
+// automatically since `prefixDefaultLocale: true` in astro.config.mjs).
+// To add another language, create `src/pages/<code>/index.astro` the same
+// way as `src/pages/it/index.astro` does. All the actual markup and data
+// loading lives in `Home.astro`, which picks the right language on its own.
+import Home from "@/components/Home.astro";
+---
+
+<Home />
