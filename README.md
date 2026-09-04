@@ -77,7 +77,7 @@ Edit `src/styles/global.css` and add your theme variables under the appropriate 
 
 ### 5. Hiding an entry without deleting it:
 
-Add `"hid": true` to any entry in a work, education, certificate, skill, or
+Add `"hide": true` to any entry in a work, education, certificate, skill, or
 project array (in any `src/i18n/data/*.json` file) to remove it from the
 website without deleting it from the JSON:
 
@@ -88,13 +88,13 @@ website without deleting it from the JSON:
       "name": "Old Company",
       "position": "Intern",
       // ...
-      "hid": true // this job is hidden, but stays in the file
+      "hide": true // this job is hidden, but stays in the file
     }
   ]
 }
 ```
 
-`hid` is checked per language file, so an entry can be hidden in one
+`hide` is checked per language file, so an entry can be hidden in one
 language and shown in another if that's ever useful — but for a normal
 "hide this everywhere" case, set it the same way in every language file.
 

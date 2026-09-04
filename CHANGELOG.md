@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `"hid": true` flag: any entry in a work, education, certificate, skill,
+- `"hide": true` flag: any entry in a work, education, certificate, skill,
   or project array can be hidden from the site without deleting it from
   the JSON data (checked per language file, filtered centrally in
   `src/i18n/cv.ts` so no component has to remember to check it)

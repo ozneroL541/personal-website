@@ -96,6 +96,7 @@
       ]
     },
     {
+      "hide": true,
       "name": "Europcar Como",
       "position": "Car wash attendant",
       "location_type": "On site",
@@ -175,6 +176,7 @@
       ]
     },
     {
+      "hide": true,
       "institution": "Politecnico di Milano",
       "url": "https://www.polimi.it",
       "area": "Computer Science Engineering",
@@ -375,6 +377,7 @@
       ]
     },
     {
+      "hide": true,
       "name": "HTML",
       "keywords": [
         "Web Development",
@@ -383,6 +386,7 @@
       ]
     },
     {
+      "hide": true,
       "name": "CSS",
       "keywords": [
         "Web Development",
@@ -400,6 +404,7 @@
       ]
     },
     {
+      "hide": true,
       "name": "Kotlin",
       "keywords": [
         "Programming Language",

@@ -23,11 +23,11 @@ export interface CV {
 
 /**
  * Any entry in one of the arrays above (a job, a degree, a skill, a
- * project...) can be marked `"hid": true` in the JSON data to hide it from
+ * project...) can be marked `"hide": true` in the JSON data to hide it from
  * the website without deleting it. See `getCV()` in `./cv.ts`, which strips
  * these out before the data reaches any component.
  */
-export type Hideable<T> = T & { hid?: boolean };
+export type Hideable<T> = T & { hide?: boolean };
 
 export type Theme = "default" | "blue" | "red" | "green" | "cyber" | string;
 
