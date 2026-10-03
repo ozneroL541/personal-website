@@ -1,127 +1,247 @@
-## Print-friendly portfolio CV
+# Lorenzo Radice — personal website
 
-![preview](https://github.com/user-attachments/assets/44c47034-06e4-412a-b9dd-014593b32215)
+This repository contains the source code for [radicelorenzo.eu](https://radicelorenzo.eu),
+a bilingual personal portfolio and printable CV.
 
-![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
-![GitHub stars](https://img.shields.io/github/stars/Smilesharks/dev-portfolio)
-![GitHub issues](https://img.shields.io/github/issues/Smilesharks/dev-portfolio)
-![GitHub forks](https://img.shields.io/github/forks/Smilesharks/dev-portfolio)
-![GitHub PRs](https://img.shields.io/github/issues-pr/Smilesharks/dev-portfolio)
+The site is built as a static Astro website. Most of the visible content is kept in
+typed JSON files, while Astro components provide the layout, responsive behavior,
+theme switching, language switching, and print stylesheet.
 
-## ✨ Features
+## Features
 
-- **Print-friendly** - Optimised layout for PDF export and printing
-- **Multilingual** - English and Italian out of the box, easy to extend with more languages
-- **Dark/Light mode** - System preference detection with manual override
-- **5 Colour themes** - Default, blue, red, green, and cyber themes
-- **Keyboard shortcuts** - Command palette with `Cmd/Ctrl + K`
-- **Responsive design** - Mobile-first approach with Tailwind CSS 4
-- **JSON-based content** - Easy content management via one JSON file per language
+- English and Italian pages
+- Locale-prefixed routes: `/en/` and `/it/`
+- Automatic redirect from `/` to `/en/`
+- Responsive portfolio layout
+- Print-friendly CV layout for browser PDF export
+- Light, dark, and system color modes
+- Blue, red, green, cyber, and default accent themes
+- Keyboard command palette (`Ctrl+K` on Windows/Linux, `Cmd+K` on macOS)
+- JSON-based CV content with shared data that is not duplicated per language
+- TypeScript checks for CV data and localization completeness
 
-## 🛠️ Stack
+## Technology
 
-- [**Astro**](https://astro.build/) - The next-gen web framework (using its built-in [i18n routing](https://docs.astro.build/en/guides/internationalization/)).
-- [**Tailwind CSS 4**](https://tailwindcss.com/) - A utility-first CSS framework with CSS-first configuration.
-- [**Alpine.js**](https://alpinejs.dev/) - Lightweight JavaScript framework for composing behaviour.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript with type syntax.
-- [**HotKeyPad**](https://github.com/nicosommi/hotkeypad) - Command palette with keyboard shortcuts.
+- [Astro](https://astro.build/) — static site generation and routing
+- [Tailwind CSS](https://tailwindcss.com/) — utility-first styling
+- [Alpine.js](https://alpinejs.dev/) — small client-side interactions
+- [TypeScript](https://www.typescriptlang.org/) — type checking
+- [HotKeyPad](https://github.com/nicosommi/hotkeypad) — command palette
 
-## 🚀 Getting Started
+## Requirements
 
-### 1. Use this Repo as an Astro Project Template
+- Node.js 18 or newer
+- npm or pnpm
 
-- I use [npm](https://npm.io/installation) as my package manager.
+The repository includes a `pnpm-lock.yaml`, so pnpm is the preferred package
+manager. The scripts also work with npm.
 
-```bash
-# Enable npm on MacOS, WSL & Linux:
-corepack enable
-corepack prepare npm@latest --activate
-```
+## Local development
 
-# Initialize the project
-```bash
-npm create astro@latest -- --template Smilesharks/dev-portfolio
-```
-
-### 2. Add Your Content:
-
-CV content lives under `src/i18n/data/`, one JSON file per language (e.g. `en.json`, `it.json`).
-Edit those files to create your own printable Portfolio/CV in each language you support.
-
-### 3. Launch the Development Server:
+Clone the repository and install dependencies:
 
 ```bash
-# Enjoy the results
-npm dev
+git clone https://github.com/ozneroL541/personal-website.git
+cd personal-website
+pnpm install
 ```
-1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view the result 🚀
 
-### 4. Customisable colours:
+Start the development server:
 
-Change the `theme` property in `src/i18n/data/en.json` (and your other language files) and choose one of the available colour themes:
+```bash
+pnpm dev
+```
 
-| Theme | Description |
-|-------|-------------|
-| `default` | Orange accent (default) |
-| `blue` | Blue/slate accent |
-| `red` | Red/stone accent |
-| `green` | Lime/green accent |
-| `cyber` | Yellow/cyan cyberpunk style |
+Open [http://localhost:4321](http://localhost:4321) in a browser. The server
+reloads when Astro components, styles, or content files change.
 
-Each theme includes light and dark mode variants. The theme selector dropdown allows users to switch between light, dark, and system preference.
+Useful commands:
 
-**Creating custom themes:**
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the local development server |
+| `pnpm start` | Alias for `pnpm dev` |
+| `pnpm build` | Run `astro check` and create a production build in `dist/` |
+| `pnpm preview` | Serve the generated `dist/` directory locally |
+| `pnpm astro ...` | Run an Astro CLI command |
 
-Edit `src/styles/global.css` and add your theme variables under the appropriate selectors (`:root [data-theme="your-theme"]` for light mode, `.dark [data-theme="your-theme"]` for dark mode).
+With npm, replace `pnpm` with `npm run` where appropriate:
 
-### 5. Hiding an entry without deleting it:
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
 
-Add `"hide": true` to any entry in a work, education, certificate, skill, or
-project array (in any `src/i18n/data/*.json` file) to remove it from the
-website without deleting it from the JSON:
+## Repository structure
 
-```jsonc
+```text
+.
+├── public/                 # Static assets served from the site root
+│   ├── favicon.svg
+│   └── photo.png
+├── src/
+│   ├── components/         # Page shell, controls, and CV sections
+│   │   └── sections/       # Hero, about, experience, education, skills, etc.
+│   ├── i18n/               # Locale registry, translations, types, and CV data
+│   │   └── data/
+│   ├── icons/              # Inline SVG Astro components
+│   ├── layouts/            # HTML document and decorative layouts
+│   ├── pages/              # Locale entry points
+│   └── styles/             # Global CSS and theme variables
+├── astro.config.mjs        # Astro, i18n, and Tailwind/Vite configuration
+├── package.json            # Scripts and dependencies
+├── pnpm-lock.yaml          # Locked dependency versions
+└── tsconfig.json           # TypeScript configuration and `@/*` alias
+```
+
+## How a page is assembled
+
+The locale pages are intentionally thin:
+
+1. [`src/pages/en/index.astro`](./src/pages/en/index.astro) and
+   [`src/pages/it/index.astro`](./src/pages/it/index.astro) render
+   [`Home.astro`](./src/components/Home.astro).
+2. `Home.astro` resolves the current locale and loads the CV through
+   [`getCV()`](./src/i18n/cv.ts).
+3. `Home.astro` composes the page from reusable section components.
+4. [`Layout.astro`](./src/layouts/Layout.astro) adds document metadata, global
+   styles, Alpine.js behavior, and theme initialization.
+5. Astro generates static HTML for each locale.
+
+The root [`src/pages/index.astro`](./src/pages/index.astro) exists so Astro can
+generate the redirect from `/` to `/en/`. It is not a separate homepage.
+
+## Editing CV content
+
+CV content lives in [`src/i18n/data/`](./src/i18n/data/).
+
+### Shared data
+
+Put values that are identical in every language in
+[`common.json`](./src/i18n/data/common.json), including:
+
+- name, image, email, phone, and personal URL
+- social profiles
+- selected theme
+- certificates
+- skills and their keywords
+- interests
+
+This prevents the same information from being edited twice.
+
+### Translated data
+
+The locale files contain language-dependent content:
+
+- [`en.json`](./src/i18n/data/en.json)
+- [`it.json`](./src/i18n/data/it.json)
+
+These files contain translated basics such as the headline and summary, plus
+work experience, education, and language fluency labels.
+
+The JSON shape is checked by the interfaces in
+[`src/i18n/cv.types.ts`](./src/i18n/cv.types.ts). If a new field is added to the
+data, update the corresponding type as well.
+
+### Hiding entries
+
+Most CV arrays support `"hide": true`. Hidden entries remain in the JSON but are
+removed before the data reaches the components:
+
+```json
 {
-  "work": [
-    {
-      "name": "Old Company",
-      "position": "Intern",
-      // ...
-      "hide": true // this job is hidden, but stays in the file
-    }
-  ]
+  "name": "An older role",
+  "position": "Intern",
+  "hide": true
 }
 ```
 
-`hide` is checked per language file, so an entry can be hidden in one
-language and shown in another if that's ever useful — but for a normal
-"hide this everywhere" case, set it the same way in every language file.
+This can be used for work experience, education, certificates, skills,
+projects, and other hideable entries. Visibility is controlled per locale.
 
-### 6. Adding a language:
+## Localization
 
-The site is available in English (`/en/`) and Italian (`/it/`); the bare `/` redirects to `/en/`. To add another language (e.g. Spanish, `es`):
+The supported languages are registered in
+[`src/i18n/config.ts`](./src/i18n/config.ts), while interface strings such as
+section titles and buttons are in [`src/i18n/ui.ts`](./src/i18n/ui.ts).
+Astro's locale routing is configured in [`astro.config.mjs`](./astro.config.mjs).
 
-1. Add its code and display name to `languages` in `src/i18n/config.ts`.
-2. Copy `src/i18n/data/en.json` to `src/i18n/data/es.json` and translate its values.
-3. Copy every key in the `en` block of `src/i18n/ui.ts` into a new `es` block and translate the UI strings (section titles, buttons, labels...).
-4. Add `"es"` to `locales` in `astro.config.mjs`.
-5. Create `src/pages/es/index.astro` with the same one-line content as `src/pages/it/index.astro`.
+To add a language:
 
-TypeScript will flag any of these steps you forget: `src/i18n/cv.ts` and `src/i18n/ui.ts` both require an entry for every language registered in `src/i18n/config.ts`, so a half-added language fails `astro check` instead of shipping silently broken.
+1. Add its language code and display name to `languages` in `src/i18n/config.ts`.
+2. Add the code to `i18n.locales` in `astro.config.mjs`.
+3. Create `src/i18n/data/<code>.json` with the localized CV fields.
+4. Add the language's UI translations to `src/i18n/ui.ts`.
+5. Create `src/pages/<code>/index.astro` that renders `<Home />`.
+6. Run `pnpm build` to catch missing locale data or translation keys.
 
-The language switcher (next to the theme switcher) picks up new entries in `languages` automatically.
+The `Record<Lang, ...>` declarations in the i18n code intentionally make
+missing language entries a TypeScript error.
 
-## 🧞 Commands
+## Themes and appearance
 
-|     | Command         | Action                                                                       |
-| :-- | :-------------- | :--------------------------------------------------------------------------- |
-| ⚙️  | `dev` o `start` | Launches a local development server at `localhost:4321`.                   |
-| ⚙️  | `build`         | Checks for errors and creates a production build in `./dist/`. |
-| ⚙️  | `preview`       | Local preview at `localhost:4321`                                       |
+The selected accent theme is stored in `common.json`:
 
-Wiki: [dev-portfolio](https://deepwiki.com/Smilesharks/dev-portfolio)
+```json
+{
+  "basics": {
+    "theme": "blue"
+  }
+}
+```
 
-CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
+Available themes are:
 
-Based on [**Bartosz Jarocki - Print-friendly, minimalist CV page**](https://github.com/BartoszJarocki/cv) and [**Miguel Ángel Durán - minimalist-portfolio-json**](https://github.com/midudev/minimalist-portfolio-json)
+| Theme | Style |
+| --- | --- |
+| `default` | Orange accent |
+| `blue` | Blue and slate accent |
+| `red` | Red and stone accent |
+| `green` | Lime and green accent |
+| `cyber` | Yellow and cyan cyberpunk accent |
+
+Theme variables and dark-mode variants are defined in
+[`src/styles/global.css`](./src/styles/global.css). The user-facing theme
+control switches between system, light, and dark modes and stores the
+preference in `localStorage`.
+
+## Printing the CV
+
+Run the development server or preview a production build, then use the
+browser's print dialog:
+
+1. Open `/en/` or `/it/`.
+2. Press `Ctrl+P`/`Cmd+P`.
+3. Choose “Save to PDF” or a physical printer.
+
+Print-specific layout rules are defined in the page components and global
+styles. Controls and decorative elements marked as non-printable are hidden
+automatically.
+
+## Building and deploying
+
+`pnpm build` generates a static `dist/` directory. The output can be hosted by
+any static web server or static hosting provider, such as GitHub Pages,
+Netlify, Vercel, or an object-storage website endpoint.
+
+For a local production preview:
+
+```bash
+pnpm build
+pnpm preview
+```
+
+No runtime server or database is required. The public assets and generated
+HTML/CSS/JavaScript are sufficient to serve the site.
+
+## Credits
+
+The project uses ideas and patterns from:
+
+- [Smilesharks](Smilesharks/dev-portfolio)
+- [Bartosz Jarocki's print-friendly CV](https://github.com/BartoszJarocki/cv)
+- [Miguel Ángel Durán's minimalist portfolio JSON](https://github.com/midudev/minimalist-portfolio-json)
+- The [JSON Resume schema](https://jsonresume.org/schema/) as inspiration for
+  the CV data shape
