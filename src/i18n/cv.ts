@@ -1,14 +1,33 @@
 import { defaultLang, getLang, type Lang } from "./config";
-import type { CV, Hideable } from "./cv.types";
+import type { CommonCV, CV, Hideable, LocalizedCV } from "./cv.types";
 
+import common from "./data/common.json";
 import en from "./data/en.json";
 import it from "./data/it.json";
 
 // Adding a language to `languages` in `./config.ts` without adding its data
 // here will cause a type error, so it can't be forgotten.
+const localizedByLang: Record<Lang, LocalizedCV> = {
+	en: en as LocalizedCV,
+	it: it as LocalizedCV,
+};
+
+const shared: CommonCV = common as CommonCV;
+
+function mergeCommonData(locale: LocalizedCV): CV {
+	return {
+		...locale,
+		...shared,
+		basics: {
+			...shared.basics,
+			...locale.basics,
+		},
+	};
+}
+
 const rawByLang: Record<Lang, CV> = {
-	en: en as CV,
-	it: it as CV,
+	en: mergeCommonData(localizedByLang.en),
+	it: mergeCommonData(localizedByLang.it),
 };
 
 function omitHidden<T>(items: Array<Hideable<T>>): Array<T>;

@@ -21,6 +21,19 @@ export interface CV {
   projects?: Array<Hideable<Projects>>;
 }
 
+/** Data shared by every locale and stored in `data/common.json`. */
+export interface CommonCV {
+  basics: Pick<Basics, "name" | "image" | "email" | "phone" | "url" | "theme" | "profiles">;
+  certificates: Array<Hideable<Certificates>>;
+  skills: Array<Hideable<Skills>>;
+  interests: Array<Hideable<Interests>>;
+}
+
+/** Locale-specific portion of a CV before shared data is merged in. */
+export type LocalizedCV = Omit<CV, keyof CommonCV> & {
+  basics: Pick<Basics, "label" | "summary" | "location">;
+};
+
 /**
  * Any entry in one of the arrays above (a job, a degree, a skill, a
  * project...) can be marked `"hide": true` in the JSON data to hide it from

@@ -1,0 +1,296 @@
+{
+  "basics": {
+    "name": "Lorenzo Radice",
+    "image": "/photo.png",
+    "email": "radicelorenzo@libero.it",
+    "phone": "+39 340 122 6028",
+    "url": "https://radicelorenzo.eu",
+    "theme": "blue",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "lorenzo-radice-99a679292",
+        "url": "https://www.linkedin.com/in/lorenzo-radice-99a679292/"
+      },
+      {
+        "network": "GitHub",
+        "username": "ozneroL541",
+        "url": "https://github.com/ozneroL541"
+      }
+    ]
+  },
+  "certificates": [
+    {
+      "name": "IELTS",
+      "date": "2025-08",
+      "issuer": "British Council",
+      "url": "https://www.ielts.org/"
+    },
+    {
+      "name": "CyberChallenge 2024",
+      "date": "2024-06",
+      "issuer": "Agenzia per la Cybersicurezza Nazionale",
+      "url": "https://cyberchallenge.it/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Linux",
+      "keywords": [
+        "Operating System",
+        "Command Line",
+        "Scripting"
+      ]
+    },
+    {
+      "name": "C",
+      "keywords": [
+        "Programming Language",
+        "Systems Programming",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "name": "C++",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Systems Programming"
+      ]
+    },
+    {
+      "name": "Python",
+      "keywords": [
+        "Programming Language",
+        "Scripting",
+        "Data Analysis"
+      ]
+    },
+    {
+      "name": "Shell",
+      "keywords": [
+        "Scripting Language",
+        "Command Line",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Java",
+      "keywords": [
+        "Programming Language",
+        "Object-Oriented Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "SQL",
+      "keywords": [
+        "Database Query Language",
+        "Data Manipulation",
+        "Data Retrieval"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "Git",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code"
+      ]
+    },
+    {
+      "name": "Docker",
+      "keywords": [
+        "Containerization",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Kubernetes",
+      "keywords": [
+        "Container Orchestration",
+        "Deployment",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Go",
+      "keywords": [
+        "Programming Language",
+        "Concurrent Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "Windows",
+      "keywords": [
+        "Operating System",
+        "Desktop Environment",
+        "Software Development"
+      ]
+    },
+    {
+      "name": "Greenbone",
+      "keywords": [
+        "Vulnerability Management",
+        "Security Scanning",
+        "Network Security"
+      ]
+    },
+    {
+      "name": "SGBox",
+      "keywords": [
+        "Security Information and Event Management (SIEM)",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "SIEM",
+      "keywords": [
+        "Security Information and Event Management",
+        "Log Analysis",
+        "Threat Detection"
+      ]
+    },
+    {
+      "name": "Wireshark",
+      "keywords": [
+        "Network Protocol Analyzer",
+        "Packet Capture",
+        "Network Troubleshooting"
+      ]
+    },
+    {
+      "name": "BurpSuite",
+      "keywords": [
+        "Web Application Security Testing",
+        "Penetration Testing",
+        "Vulnerability Assessment"
+      ]
+    },
+    {
+      "name": "Regex",
+      "keywords": [
+        "Regular Expressions",
+        "Pattern Matching",
+        "Text Processing"
+      ]
+    },
+    {
+      "name": "Nmap",
+      "keywords": [
+        "Network Scanning",
+        "Port Scanning",
+        "Security Auditing"
+      ]
+    },
+    {
+      "name": "Raspberry Pi",
+      "keywords": [
+        "Single-board Computer",
+        "IoT"
+      ]
+    },
+    {
+      "name": "LaTeX",
+      "keywords": [
+        "Document Preparation",
+        "Typesetting",
+        "Scientific Writing"
+      ]
+    },
+    {
+      "hide": true,
+      "name": "HTML",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Markup Language"
+      ]
+    },
+    {
+      "hide": true,
+      "name": "CSS",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "hide": true,
+      "name": "Kotlin",
+      "keywords": [
+        "Programming Language",
+        "Android Development",
+        "Object-Oriented Programming"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Technology",
+      "keywords": [
+        "Programming",
+        "Cybersecurity",
+        "Virtualization",
+        "Networking",
+        "Cloud Computing"
+      ]
+    },
+    {
+      "name": "Car Racing",
+      "keywords": [
+        "Formula SAE",
+        "Racing",
+        "Telemetry",
+        "GT3",
+        "DMT"
+      ]
+    },
+    {
+      "name": "Motorcycles",
+      "keywords": [
+        "Kawasaki",
+        "Ninja 400",
+        "Rides"
+      ]
+    },
+    {
+      "name": "Skii Mountaineering",
+      "keywords": [
+        "Mountain",
+        "Alpinism",
+        "Snow",
+        "Skiing"
+      ]
+    },
+    {
+      "name": "Alpinism",
+      "keywords": [
+        "Mountain",
+        "Climbing",
+        "Hiking"
+      ]
+    }
+  ]
+}
